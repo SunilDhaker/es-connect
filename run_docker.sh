@@ -1,0 +1,1 @@
+docker run -v /home/sdhaker/es-connect:/etc/elk --link elk:elk.databases  --add-host=broker.kafka:10.160.0.2 --add-host=kafka-0:10.160.0.2 --add-host=kafka-1:10.160.0.4 --add-host=kafka-2:10.160.0.3 confluentinc/cp-kafka-connect connect-standalone /etc/elk/connect/connect.prop /etc/elk/es/es.prop
